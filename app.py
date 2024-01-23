@@ -20,7 +20,7 @@ def set_page_config():
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
-    file_name = 'https://raw.githubusercontent.com/diogo-costa-silva/datasets/main/sales_data_sample.csv'
+    file_name = 'https://raw.githubusercontent.com/diogo-costa-silva/assets/main/data/sales_data_sample.csv'
     data = pd.read_csv(file_name, encoding='latin1')
     data['ORDERDATE'] = pd.to_datetime(data['ORDERDATE'])
     return data
